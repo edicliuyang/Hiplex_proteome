@@ -122,41 +122,18 @@ The data visualization were completed with R language. The package used extensiv
 
 Common data visualization scripts include:
 
-**1. Total_transcripts and Gene_count.R**
-	
-<<<<<<< Updated upstream
-This R script generates the Filtered_matrix.tsv (expression matrix with useful pixels only), makes the count per pixel distribution plot (UMI.pdf and Gene.pdf) and the spatial heatmap of genes and UMIs(UMI_heatmap.pdf and Gene_heatmap.pdf). See below:
-See below:
-	
-[UMI.pdf](https://github.com/edicliuyang/DBiT-seq_FFPE/blob/master/Example_Data/UMI.pdf)
+For RNA:
+No1_Prerun.R:          count the RNA and UMI counts per pixel
+No2_repair_filtered_matrix.R:       remove the pixels not on tissue and correct for channels with defects
+No3_Total_transcripts and Gene_count_after_correction.R: replot the RNA and UMI counts heatmap
+No4_clustering_SCT&CLR.R: clustering and spatial plot with SCTranscform or CLR normalization.
 
-[Gene.pdf](https://github.com/edicliuyang/DBiT-seq_FFPE/blob/master/Example_Data/Gene.pdf)
+For Protein:
+No1-No5 same as RNA script above.
+No5_Individual gene plot_SCT&CLR.R: plot individual protein heatmap.
 
-[UMI_heatmap.pdf](https://github.com/edicliuyang/DBiT-seq_FFPE/blob/master/Example_Data/UMI_heatmap.pdf)
-
-[Gene_heatmap.pdf](https://github.com/edicliuyang/DBiT-seq_FFPE/blob/master/Example_Data/Gene_heatmap.pdf)
-
-
-**2. Clustering.R**
- 
-This R script clusters the pixels using Seurat Package, with SCTransform performed for all pixels. 
-It will generate the spatial cluster map (clusters.pdf), and also the UMAP plot (on the Rstudio UI). 
-See examples below:
-
-[clusters.pdf](https://github.com/edicliuyang/DBiT-seq_FFPE/blob/master/Example_Data/clusters.pdf)
-
-[UMAP_clusters.pdf](https://github.com/edicliuyang/DBiT-seq_FFPE/blob/master/Example_Data/UMAP_clusters.pdf)
-
-
-### 3. Intergration with scRNA-seq data 
-
-
-
-
-
-
-
-
+##Tissue images_manuscript
+this folder contains all the microscope images in this manuscript.
 
 ## Contact
 

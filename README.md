@@ -1,20 +1,21 @@
-# Hiplex_proteome
+# Spatial-CITE-seq
 This repository aims to share the raw data processing and visualization codes used in Hiplex_proteome sequencing project.
+<p><img src="scheme.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 This repository includes the main R scripts used for the visualization of the sequencing data of RNA and protein, including clustering, Differential expression gene/protein analysis, integrated analysis, etc.
 
 
 ## Abstract
 
-DBiT-seq was a spatial multiomic sequencing technique that can also be directly applied for FFPE samples. We have successfully demonstrated spatial transcriptome sequencing of embryonic and adult mouse FFPE tissue sections at cellular level (25μm pixel size) with high coverage (>1,000 genes per pixel). Spatial transcriptome of a E10.5 mouse embryo identified all major anatomical features in the brain and abdominal region. 
+Spatial-CITE-seq is a spatial multiomic sequencing technique that can also be directly applied for transcriptome and hiplex protein sequencing. We have successfully demonstrated spatial omics sequencing of mouse and human sections at cellular level (25μm pixel size) with high coverage of genes (>1,000 genes per pixel) and proteins (200-300 proteins per pixel). 
 
 ## Data processing
 
 ### 1. Raw Fastq data processing using ST pipeline and generate expression matrix
 
-We did the illumina pair-end 100 sequencing using Hiseq 4000 and pool two samples (tissue sections) for each sequencing lane. 
+We did the illumina pair-end 100 sequencing using Novaseq 6000 and pool two samples (tissue sections) for each sequencing lane. 
 
-**The DBiT-seq Raw fastq file**
+**The Spatial-CITE-seq Raw fastq file**
 
 Read 1: Contains the cDNA sequence
 

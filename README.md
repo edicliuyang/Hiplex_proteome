@@ -122,7 +122,8 @@ The data visualization were completed with R language. The package used extensiv
 
 Common data visualization scripts include:
 
-For RNA:
+#For RNA:
+
 No1_Prerun.R:          count the RNA and UMI counts per pixel
 
 No2_repair_filtered_matrix.R:       remove the pixels not on tissue and correct for channels with defects
@@ -131,7 +132,8 @@ No3_Total_transcripts and Gene_count_after_correction.R: replot the RNA and UMI 
 
 No4_clustering_SCT&CLR.R: clustering and spatial plot with SCTranscform or CLR normalization.
 
-For Protein:
+#For Protein:
+
 No1-No5 same as RNA script above.
 
 No5_Individual gene plot_SCT&CLR.R: plot individual protein heatmap.

@@ -1,5 +1,6 @@
 # Hiplex_proteome
 This repository aims to share the raw data processing and visualization codes used in Hiplex_proteome sequencing project.
+<p><img src="schematic.png" alt="foo bar" title="train &amp; tracks" /></p>
 
 This repository includes the main R scripts used for the visualization of the sequencing data of RNA and protein, including clustering, Differential expression gene/protein analysis, integrated analysis, etc.
 

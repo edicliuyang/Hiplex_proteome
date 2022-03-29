@@ -17,7 +17,7 @@ We did the illumina pair-end 100 sequencing using Novaseq 6000 and pool two samp
 
 **The Spatial-CITE-seq Raw fastq file**
 
-Read 1: Contains the cDNA sequence
+Read 1: Contains the cDNA sequence or protein barcode
 
 Read 2: Contains the spatial Barcode A, Barcode B and UMIs
 
@@ -106,12 +106,12 @@ There two steps:
 To run the Matlab script "Pixel_identification.m"
 1. Use Photoshop or other photo editing software to crop the microscope image into exactly the size of the DBiT-seq covering area. For example, the upperleft of the image should be the 1x1 pixel of DBiT-seq, and the lowerright is the 50x50. No space is allowed. See "FFPE-2.jpg" for example.
 
-<img src="https://github.com/edicliuyang/DBiT-seq_FFPE/blob/master/Example_Data/FFPE-2.jpg" width="500">
+<img src="Figure_Processing/colon.jpg" width="500">
 
 2. Use threashold function under Image->adjustment menu to adjust the image, so that your tissue is black and background is compeletely white. 
 3. Invert the color of the image. The final image is like "FFPE-2_BW.jpg" in the Example_Data folder.
 
-<img src="https://github.com/edicliuyang/DBiT-seq_FFPE/blob/master/Example_Data/FFPE-2_BW.jpg" width="500">
+<img src="Figure_Processing/colon_bw.jpg" width="500">
 
 4. Run the matlab script and a postion.txt file will be generated, which contains only the useful pixels.
 

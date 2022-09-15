@@ -3,12 +3,13 @@
 % include all the pixels that are on top of a tissue. 
 
 % Enter the Example_Data folder
-cd '.\Example_Data'
+cd 'H:\MS\Mat1'
 
 % image (cropped exactly to the size of working region of DBiT-seq) needs
 % to be processed to make it black (background) and white (tissue)
 % beforehand, see FFPE-2_BW.jpg for example
-I = imread('spleen_BW.jpg'); I = rgb2gray(I);
+I = imread('Mat1_BW.jpg');
+I = rgb2gray(I);
 BW = imbinarize(I);
 
 % show the figure on the screen

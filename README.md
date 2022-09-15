@@ -17,7 +17,7 @@ We did the illumina pair-end 100 sequencing using Novaseq 6000 and pool two samp
 
 **The Spatial-CITE-seq Raw fastq file**
 
-Read 1: Contains the cDNA sequence
+Read 1: Contains the cDNA sequence or protein barcode
 
 Read 2: Contains the spatial Barcode A, Barcode B and UMIs
 
@@ -106,12 +106,12 @@ There two steps:
 To run the Matlab script "Pixel_identification.m"
 1. Use Photoshop or other photo editing software to crop the microscope image into exactly the size of the DBiT-seq covering area. For example, the upperleft of the image should be the 1x1 pixel of DBiT-seq, and the lowerright is the 50x50. No space is allowed. See "FFPE-2.jpg" for example.
 
-<img src="https://github.com/edicliuyang/DBiT-seq_FFPE/blob/master/Example_Data/FFPE-2.jpg" width="500">
+<img src="Figure_Processing/colon.jpg" width="500">
 
 2. Use threashold function under Image->adjustment menu to adjust the image, so that your tissue is black and background is compeletely white. 
 3. Invert the color of the image. The final image is like "FFPE-2_BW.jpg" in the Example_Data folder.
 
-<img src="https://github.com/edicliuyang/DBiT-seq_FFPE/blob/master/Example_Data/FFPE-2_BW.jpg" width="500">
+<img src="Figure_Processing/colon_bw.jpg" width="500">
 
 4. Run the matlab script and a postion.txt file will be generated, which contains only the useful pixels.
 
@@ -122,41 +122,25 @@ The data visualization were completed with R language. The package used extensiv
 
 Common data visualization scripts include:
 
-**1. Total_transcripts and Gene_count.R**
-	
-<<<<<<< Updated upstream
-This R script generates the Filtered_matrix.tsv (expression matrix with useful pixels only), makes the count per pixel distribution plot (UMI.pdf and Gene.pdf) and the spatial heatmap of genes and UMIs(UMI_heatmap.pdf and Gene_heatmap.pdf). See below:
-See below:
-	
-[UMI.pdf](https://github.com/edicliuyang/DBiT-seq_FFPE/blob/master/Example_Data/UMI.pdf)
+#For RNA:
 
-[Gene.pdf](https://github.com/edicliuyang/DBiT-seq_FFPE/blob/master/Example_Data/Gene.pdf)
+No1_Prerun.R:          count the RNA and UMI counts per pixel
 
-[UMI_heatmap.pdf](https://github.com/edicliuyang/DBiT-seq_FFPE/blob/master/Example_Data/UMI_heatmap.pdf)
+No2_repair_filtered_matrix.R:       remove the pixels not on tissue and correct for channels with defects
 
-[Gene_heatmap.pdf](https://github.com/edicliuyang/DBiT-seq_FFPE/blob/master/Example_Data/Gene_heatmap.pdf)
+No3_Total_transcripts and Gene_count_after_correction.R: replot the RNA and UMI counts heatmap
 
+No4_clustering_SCT&CLR.R: clustering and spatial plot with SCTranscform or CLR normalization.
 
-**2. Clustering.R**
- 
-This R script clusters the pixels using Seurat Package, with SCTransform performed for all pixels. 
-It will generate the spatial cluster map (clusters.pdf), and also the UMAP plot (on the Rstudio UI). 
-See examples below:
+#For Protein:
 
-[clusters.pdf](https://github.com/edicliuyang/DBiT-seq_FFPE/blob/master/Example_Data/clusters.pdf)
+No1-No5 same as RNA script above.
 
-[UMAP_clusters.pdf](https://github.com/edicliuyang/DBiT-seq_FFPE/blob/master/Example_Data/UMAP_clusters.pdf)
+No5_Individual gene plot_SCT&CLR.R: plot individual protein heatmap.
 
+##Tissue images_manuscript
 
-### 3. Intergration with scRNA-seq data 
-
-
-
-
-
-
-
-
+this folder contains all the microscope images in this manuscript.
 
 ## Contact
 
